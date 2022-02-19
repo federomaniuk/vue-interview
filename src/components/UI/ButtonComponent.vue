@@ -17,7 +17,7 @@ export default {
 <style lang="scss">
 $boxShadow: 0 .5rem .75rem rgba(88, 185, 238, .5);
 button {
-  background: linear-gradient(295deg, $primaryColor 0%, $secondaryColor 100%);
+  background: $standardGradient;
   border-radius: $standardRadius;
   display: flex;
   justify-content: center;

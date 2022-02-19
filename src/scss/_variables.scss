@@ -15,3 +15,9 @@ $gray: rgba(34, 34, 34, 1);
 $darkGray: rgba(26, 26, 26, 1);
 
 $darkerGray: rgba(18, 18, 18, 1);
+
+$standardGradient: linear-gradient(
+  295deg,
+  $primaryColor 0%,
+  $secondaryColor 100%
+);

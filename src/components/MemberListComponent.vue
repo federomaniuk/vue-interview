@@ -20,7 +20,7 @@ export default {
 
 <style scoped lang="scss">
   .memberListContainer {
-    background-color: blue;
+    background-color: $darkerGray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;

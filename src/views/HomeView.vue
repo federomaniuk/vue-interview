@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
   .membershipContainer {
     display: grid;
-    grid-template-columns: .3fr .7fr;
+    grid-template-columns: .27fr .73fr;
     height: calc(100vh - 6rem);
     position: relative;
   }

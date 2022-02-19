@@ -21,9 +21,11 @@ export default {
   margin: 0;
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  font-size: 1.5rem;
 }
 p {
   margin: 0;
