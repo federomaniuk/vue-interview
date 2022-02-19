@@ -7,10 +7,9 @@
     </div>
     <div class="actionsContainer">
       <ButtonComponent>
-        <img src="refreshIcon.svg" alt="VUE Demonstration Logo" />
+        <img src="refreshIcon.svg" alt="" />
       </ButtonComponent>
     </div>
-    
   </div>
 </template>
 
@@ -55,13 +54,14 @@ export default {
     justify-content: space-between;
     align-items: center;
     background-color: $gray;
-    padding: 1.5rem;
+    height: 6rem;
+    padding: 0 3rem;
+    margin: 0;
     .brandContainer {
       display: flex;
-      margin-left: $horMargin;
       color: white;
       .companyName {
-        color: rgba(69, 131, 222, 1);
+        color: $secondaryColor;
       }
       .companyDate {
         color: RGBA(255, 255, 255, .75);

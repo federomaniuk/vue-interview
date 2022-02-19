@@ -1,17 +1,29 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="membershipContainer">
+    <TotalMembershipsComponent />
+    <MembersListComponent />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TotalMembershipsComponent from '@/components/TotalMembershipsComponent.vue'
+import MembersListComponent from '@/components/MemberListComponent.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    TotalMembershipsComponent,
+    MembersListComponent
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .membershipContainer {
+    display: grid;
+    grid-template-columns: .3fr .7fr;
+    height: calc(100vh - 6rem);
+    position: relative;
+  }
+</style>

@@ -1,6 +1,10 @@
 $standardShadow: 0px 5px 15px 0.5px RGBA(7, 29, 73, 0.075);
 
-$standardTransition: 0.2s ease;
+$standardTransition: 0.15s ease;
+
+$standardTransform: translateY(-0.3rem);
+
+$standardRadius: 0.5rem;
 
 $primaryColor: rgba(48, 83, 220, 1);
 
@@ -8,6 +12,6 @@ $secondaryColor: rgba(88, 185, 238, 1);
 
 $gray: rgba(34, 34, 34, 1);
 
-$darkerGray: rgba(26, 26, 26, 1);
+$darkGray: rgba(26, 26, 26, 1);
 
-$black: rgba(18, 18, 18, 1);
+$darkerGray: rgba(18, 18, 18, 1);

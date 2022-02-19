@@ -14,21 +14,31 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+$boxShadow: 0 .5rem .75rem rgba(88, 185, 238, .5);
 button {
-  background: linear-gradient(295deg, rgba(48,83,220,1) 0%, rgba(88,185,238,1) 100%);
-  border-radius: .5rem;
+  background: linear-gradient(295deg, $primaryColor 0%, $secondaryColor 100%);
+  border-radius: $standardRadius;
   display: flex;
   justify-content: center;
   align-content: center;
   padding: .9rem;
   border: 0;
+  transition: $standardTransition;
+  outline: none !important;
 }
 button:focus {
-  outline: none !important;
   box-shadow: none !important;
+  box-shadow: $boxShadow;
 }
-.btn:hover {
-  transition: 0.15s;
+
+button:active {
+  box-shadow: none !important;
+  box-shadow: $boxShadow;
+}
+button:hover {
+  box-shadow: $boxShadow;
+  transform: $standardTransform;
+  cursor: pointer;
 }
 </style>
