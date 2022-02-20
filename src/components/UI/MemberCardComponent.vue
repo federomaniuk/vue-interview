@@ -1,17 +1,31 @@
 <template>
   <div class="cardContainer">
     <div class="cardHeader">
-      <div class="employeeId">02</div>
-      <div class="employeeImage">ER</div>
+      <div class="employeeId">{{ Member.id }}</div>
+      <div class="employeeImage">
+        <img
+        :src="`users/`+Member.id+`.jpg`"
+        :alt="`User `+Member.fullName"
+        @click="$store.commit('increaseMemberSales', Member)"
+        />
+      </div>
       <div class="employeeData">
-        <p class="employeeName">Emmanuello Reminder</p>
-        <p class="employeePosition">CSR</p>
+        <p class="employeeName">{{ Member.fullName }}</p>
+        <p class="employeePosition">{{ Member.position }}</p>
       </div>
     </div>
     <ul class="membershipData">
-      <li v-for="(data, index) in membershipData" :key="index" :id="data.id">
-        <p>{{ data.title }}: </p>
-        <p>{{ data.stat }}</p>
+      <li>
+        <p>Inbound Call Time: </p>
+        <p>{{ Member.memberStats.callTime }} </p>
+      </li>
+      <li>
+        <p>Booked Percentage: </p>
+        <p>{{ Member.memberStats.bookedPercentage }} </p>
+      </li>
+      <li>
+        <p>Memberships Sold: </p>
+        <p>{{ Member.memberStats.membershipsSold }}</p>
       </li>
     </ul>
   </div>
@@ -19,14 +33,8 @@
 
 <script>
 export default {
-  data () {
-    return {
-      membershipData: [
-        { title: 'Inbound Call Time', stat: '00:02:40' },
-        { title: 'Booked Percentage', stat: '45%' },
-        { title: 'Memberships Sold', stat: '12' }
-      ],
-    };
+  props: {
+    Member: { type: Object, required: true },
   },
 };
 </script>
@@ -37,36 +45,54 @@ $imgSize: 3.5rem;
 .cardContainer {
   background-color: $gray;
   width: 100%;
+  min-width: 19rem;
   height: 15rem;
   display: flex;
   flex-direction: column;
   border-radius: $standardRadius;
   .cardHeader {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     height: 4rem;
     padding: 1rem 1rem;
-    .employeeId, .employeeImage {
-      background: $standardGradient;
-      width: $idSize;
-      height: $idSize;
+    .employeeId {
+      background: $standardGradient02;
+      min-width: $idSize;
+      min-height: $idSize;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 100%;
       font-weight: 600;
       color: white;
+      margin: 0 .5rem;
     }
     .employeeImage {
       width: $imgSize;
       height: $imgSize;
-      background: white;
-      color: $primaryColor;
+      border-radius: 100%;
+      margin: 0 .5rem;
+      border: .1rem solid rgba(0, 0, 0, 0);
+      transition: $standardTransition;
+      img {
+        border-radius: 100%;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+      }
+      &:hover {
+        border: .1rem solid $secondaryColor;
+        transform: $standardTransform;
+        box-shadow: $standardShadow;
+        cursor: pointer;
+      }
     }
     .employeeData {
       text-align: left;
       font-weight: 600;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -77,7 +103,7 @@ $imgSize: 3.5rem;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 95%;
+        max-width: 85%;
         color: white;
       }
       .employeePosition {
@@ -87,6 +113,7 @@ $imgSize: 3.5rem;
   }
   .membershipData {
     padding: 0;
+    margin: 0;
     li {
       list-style: none;
       display: flex;
@@ -100,7 +127,7 @@ $imgSize: 3.5rem;
         border-top: 1px solid rgba(255, 255, 255, .05)
       }
       &:last-child {
-        background: $standardGradient;
+        background: $standardGradient03;
         color: white;
         border-radius: 0 0 $standardRadius $standardRadius;
       }

@@ -15,9 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-$boxShadow: 0 .5rem .75rem rgba(88, 185, 238, .5);
 button {
-  background: $standardGradient;
+  background: $standardGradient01;
   border-radius: $standardRadius;
   display: flex;
   justify-content: center;
@@ -29,15 +28,15 @@ button {
 }
 button:focus {
   box-shadow: none !important;
-  box-shadow: $boxShadow;
+  box-shadow: $standardShadow;
 }
 
 button:active {
   box-shadow: none !important;
-  box-shadow: $boxShadow;
+  box-shadow: $standardShadow;
 }
 button:hover {
-  box-shadow: $boxShadow;
+  box-shadow: $standardShadow;
   transform: $standardTransform;
   cursor: pointer;
 }

@@ -1,8 +1,10 @@
 <template>
   <div class="memberListContainer">
-    <MemberCardComponent />
-    <MemberCardComponent />
-    <MemberCardComponent />
+    <MemberCardComponent
+    v-for="(member, index) in memberListGlobal"
+    :Member="member"
+    :key="index"
+    />
   </div>
 </template>
 
@@ -11,10 +13,15 @@
 import MemberCardComponent from '@/components/UI/MemberCardComponent.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'MemberListComponent',
   components: {
     MemberCardComponent,
-  }
+  },
+  data () {
+    return {
+      memberListGlobal: this.$store.state.memberList,
+    }
+  },
 }
 </script>
 

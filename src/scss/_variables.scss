@@ -1,4 +1,4 @@
-$standardShadow: 0px 5px 15px 0.5px RGBA(7, 29, 73, 0.075);
+$standardShadow: 0 0.5rem 0.75rem rgba(88, 185, 238, 0.5);
 
 $standardTransition: 0.15s ease;
 
@@ -16,8 +16,20 @@ $darkGray: rgba(26, 26, 26, 1);
 
 $darkerGray: rgba(18, 18, 18, 1);
 
-$standardGradient: linear-gradient(
-  295deg,
+$standardGradient01: linear-gradient(
+  280deg,
+  $primaryColor 0%,
+  $secondaryColor 100%
+);
+
+$standardGradient02: linear-gradient(
+  0deg,
+  $primaryColor 0%,
+  $secondaryColor 100%
+);
+
+$standardGradient03: linear-gradient(
+  90deg,
   $primaryColor 0%,
   $secondaryColor 100%
 );

@@ -1,18 +1,10 @@
 <template>
   <div class="totalMembershipsContainer">
     <p>Total Memberships Sold:</p>
-    <p>36</p>
+    <p>{{ $store.state.totalSales }}</p>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">

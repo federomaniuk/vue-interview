@@ -6,8 +6,8 @@
       </p>
     </div>
     <div class="actionsContainer">
-      <ButtonComponent>
-        <img src="refreshIcon.svg" alt="" />
+      <ButtonComponent @click="$store.commit('increaseAllMemberSales')">
+        <img src="refreshIcon.svg" alt=""/>
       </ButtonComponent>
     </div>
   </div>
@@ -31,16 +31,6 @@ export default {
           class: 'companyDate'
         }
       ],
-      navLinks : [
-        {
-          path: '/',
-          title: 'Home'
-        },
-        {
-          path: '/about',
-          title: 'About'
-        },
-      ]
     }
   }
 
