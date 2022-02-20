@@ -49,6 +49,7 @@ export default {
     margin: 0;
     .brandContainer {
       display: flex;
+      width: 70%;
       color: white;
       .companyName {
         color: $secondaryColor;

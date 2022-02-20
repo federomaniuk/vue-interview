@@ -16,8 +16,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   font-size: 1.5rem;
+  padding: .5rem;
 }
 p {
   margin: 0;

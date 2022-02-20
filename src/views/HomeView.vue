@@ -25,5 +25,8 @@ export default {
     grid-template-columns: .27fr .73fr;
     height: calc(100vh - 6rem);
     position: relative;
+    @media(max-width: 790px) {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

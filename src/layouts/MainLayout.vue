@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div>
     <HeaderComponent />
     <router-view></router-view>
   </div>
@@ -13,7 +13,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
