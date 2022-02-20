@@ -45,8 +45,8 @@ $imgSize: 3.5rem;
 .cardContainer {
   background-color: $gray;
   width: 100%;
-  min-width: 19rem;
-  height: 15rem;
+  min-width: 10rem;
+  height: 13rem;
   display: flex;
   flex-direction: column;
   border-radius: $standardRadius;
@@ -69,6 +69,8 @@ $imgSize: 3.5rem;
       margin: 0 .5rem;
     }
     .employeeImage {
+      min-width: $imgSize;
+      min-height: $imgSize;
       width: $imgSize;
       height: $imgSize;
       border-radius: 100%;
@@ -103,7 +105,7 @@ $imgSize: 3.5rem;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        max-width: 85%;
+        max-width: 80%;
         color: white;
       }
       .employeePosition {
