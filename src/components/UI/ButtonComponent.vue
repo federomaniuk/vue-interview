@@ -1,20 +1,16 @@
 <template>
-  <button :class="btnClass" @click="$emit('click', $event)">
+  <button>
     <slot />
   </button>
 </template>
 
 <script>
 export default {
-  props: {
-    to: { type: String, default: "#" },
-    btnClass: { type: String, default: "btn btn-primary" },
-    icon: { type: String }
-  }
+  name: 'ButtonComponent',
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 button {
   background: $standardGradient01;
   border-radius: $standardRadius;
@@ -26,6 +22,7 @@ button {
   transition: $standardTransition;
   outline: none !important;
 }
+
 button:focus {
   box-shadow: none !important;
   box-shadow: $standardShadow;
