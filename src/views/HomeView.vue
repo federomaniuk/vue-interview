@@ -6,7 +6,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import TotalMembershipsComponent from '@/components/TotalMembershipsComponent.vue'
 import MembersListComponent from '@/components/MemberListComponent.vue'
 

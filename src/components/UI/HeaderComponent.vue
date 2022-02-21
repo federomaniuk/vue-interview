@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'HeaderComponent',
   data() {
     return {
       headerInfo : [
@@ -37,8 +38,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  $horMargin: 2rem;
+<style scoped lang="scss">
   .headerContainer {
     display: flex;
     justify-content: space-between;

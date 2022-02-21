@@ -3,6 +3,10 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
+      /*
+      I declare totalSales and memberList array
+      with each employee info and some default info
+      */
       totalSales: 36,
       memberList: [
         {

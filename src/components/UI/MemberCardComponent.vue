@@ -33,6 +33,7 @@
 
 <script>
 export default {
+  name: 'MemberCardComponent',
   props: {
     Member: { type: Object, required: true },
   },
@@ -126,7 +127,7 @@ $imgSize: 3.5rem;
       font-size: .9rem;
       &:first-child {
         background-color: rgba(255, 255, 255, .03);
-        border-top: 1px solid rgba(255, 255, 255, .05)
+        border-top: 0.1rem solid rgba(255, 255, 255, .05)
       }
       &:last-child {
         background: $standardGradient03;

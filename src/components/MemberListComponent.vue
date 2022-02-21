@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import MemberCardComponent from '@/components/UI/MemberCardComponent.vue'
 
 export default {
